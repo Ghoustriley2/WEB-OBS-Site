@@ -13,7 +13,7 @@
 
 # локатор
 
-- [>VOLTAGE<]()
+- [>VOLTAGE<](RULES (VOLTAGE RS)/NGI VOLTAGE RS (VOLTAGE RULE SYSTEMS).md)
 - [> <]()
 - [> <]()
 
