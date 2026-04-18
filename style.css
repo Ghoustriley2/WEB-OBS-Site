@@ -1,114 +1,145 @@
-/* ===== BASE ===== */
+
+/* =========================
+   BASE SYSTEM
+========================= */
+
 body {
-  background: radial-gradient(circle at top, #0b0b0f, #050507);
-  color: #e6e6e6;
+  background: radial-gradient(circle at top, #07070a, #030305);
+  color: #d8d8d8;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* ===== MAIN TITLE ===== */
+/* =========================
+   HEADERS (H1 FIXED)
+========================= */
+
 h1 {
-  color: #d4af37; /* золото */
-  text-shadow: 0 0 15px #d4af37, 0 0 30px rgba(212,175,55,0.4);
-  font-size: 42px;
+  color: #d4af37; /* ЗОЛОТО */
+  text-shadow: 0 0 12px rgba(212,175,55,0.6);
+  font-size: 44px;
   border-bottom: 2px solid #d4af37;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+  position: relative;
 }
 
-/* ===== SECTIONS ===== */
+/* убираем синие "маркер-штучки" */
+h1::before,
+h2::before {
+  content: "";
+}
+
+/* =========================
+   H2 IMPERIAL STYLE
+========================= */
+
 h2 {
-  color: #ffcc66;
+  color: #ffd700;
+  position: relative;
+  padding-left: 18px;
   margin-top: 40px;
-  border-left: 4px solid #d4af37;
-  padding-left: 10px;
+  text-shadow: 0 0 8px rgba(255,215,0,0.3);
 }
 
-h3 {
-  color: #c0c0c0;
+/* левая золотая линия */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 80%;
+  width: 3px;
+  background: #d4af37;
+  box-shadow: 0 0 10px #d4af37;
 }
 
-/* ===== TEXT BLOCKS ===== */
+/* =========================
+   HORIZONTAL LINES (--- FIX)
+========================= */
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #ffd700,
+    #d4af37,
+    transparent
+  );
+  margin: 35px 0;
+  box-shadow: 0 0 8px rgba(212,175,55,0.2);
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+
 p {
-  color: #d0d0d0;
+  color: #cfcfcf;
 }
 
-/* ===== EMPHASIS ===== */
+/* жирный текст */
 strong {
   color: #ffd700;
 }
 
+/* курсив */
 em {
-  color: #aaaaaa;
+  color: #b0b0b0;
 }
 
-/* ===== CODE BLOCKS ===== */
+/* =========================
+   CODE BLOCK FIX (ГЛАВНОЕ)
+========================= */
+
+code {
+  color: #00ffd5;
+  background: #0a0a0f;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+/* БЛОКИ КОДА */
 pre {
-  background: #0f0f14;
+  background: linear-gradient(135deg, #0a0a0f, #050508);
   border: 1px solid #2a2a2a;
-  padding: 15px;
+  border-left: 4px solid #d4af37;
+  padding: 16px;
   overflow-x: auto;
   color: #00ffd5;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
 }
 
-/* ===== LISTS ===== */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-/* ===== LINKS ===== */
-a {
+/* внутри блока */
+pre code {
   color: #00ffd5;
+  background: transparent;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #ffd700;
   text-decoration: none;
 }
 
 a:hover {
-  text-shadow: 0 0 10px #00ffd5;
+  text-shadow: 0 0 10px #ffd700;
 }
 
-/* ===== IMPERIAL HEADER LINE ===== */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  margin: 30px 0;
-}
+/* =========================
+   BLOCKQUOTE (IMPORTANT BOX)
+========================= */
 
-/* ===== GOLD ACCENT BOX ===== */
 blockquote {
   border-left: 4px solid #d4af37;
-  padding-left: 15px;
-  color: #cccccc;
+  padding: 12px 15px;
   background: rgba(212,175,55,0.05);
-}
-
-/* ===== CODE BLOCK FIX ===== */
-
-code {
-  color: #00ffd5;
-  background: #0f0f14;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-/* большие блоки кода */
-pre code {
-  display: block;
-  color: #00ffd5;
-  background: #0b0b10;
-  padding: 15px;
-  border-left: 3px solid #d4af37;
-  overflow-x: auto;
-}
-
-/* сам контейнер блока */
-pre {
-  background: #0b0b10;
-  border: 1px solid #2a2a2a;
-  box-shadow: 0 0 10px rgba(212,175,55,0.1);
+  color: #d0d0d0;
 }
