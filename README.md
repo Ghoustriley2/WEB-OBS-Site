@@ -49,7 +49,7 @@ NGIX не является набором правил сервера.
 
 ### 1.2 VOLTAGE
 
-[переходник:](RULES (VOLTAGE RS)/NGI VOLTAGE RS (VOLTAGE RULE SYSTEMS).md)
+**[>>>переходник<<<](RULES (VOLTAGE RS)/NGI VOLTAGE RS (VOLTAGE RULE SYSTEMS).md)**
 
 - модуль безопасности
 - классификация угроз и нарушений
