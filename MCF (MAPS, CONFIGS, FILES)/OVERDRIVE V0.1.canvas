@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"id":"96f4102b48933b38","type":"group","x":-720,"y":480,"width":1065,"height":600,"color":"4","label":"N1"},
+		{"id":"9edee1fca22baffc","type":"group","x":-720,"y":1200,"width":1065,"height":600,"color":"3","label":"N2"},
+		{"id":"accc61e856a3fc51","type":"group","x":-720,"y":1920,"width":1065,"height":600,"color":"2","label":"N3"},
+		{"id":"14ad927e8dfb0e28","type":"group","x":-720,"y":2640,"width":1065,"height":600,"color":"1","label":"N4"},
+		{"id":"4aa6bfe5b5b425a0","type":"file","file":"projects/NGI (NEOGRANDOS)/MCF (MAPS, CONFIGS, FILES)/NGI INFO.md","x":-433,"y":60,"width":216,"height":225,"color":"4"},
+		{"id":"1bbde5eeb3690965","type":"text","text":"VERSIONS","x":140,"y":100,"width":115,"height":50,"color":"4"},
+		{"id":"e9581e3aa5db6970","type":"text","text":"V0.1","x":40,"y":240,"width":67,"height":50,"color":"4"},
+		{"id":"83f2e6249adc4016","type":"text","text":"START POINT","x":8,"y":-40,"width":132,"height":50,"color":"3"},
+		{"id":"4f55c31966207926","type":"text","text":"INFO","x":-360,"y":-40,"width":70,"height":50,"color":"4"},
+		{"id":"886df91dc11b666d","type":"file","file":"projects/NGI (NEOGRANDOS)/MCF (MAPS, CONFIGS, FILES)/OD CONFIG V0.1.md","x":-52,"y":-300,"width":252,"height":228,"color":"3"},
+		{"id":"c4f6debf2fa27fc7","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#ролеплей","x":-325,"y":560,"width":268,"height":440,"color":"4"},
+		{"id":"e6306e5159cc1a34","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#развлечения","x":-17,"y":560,"width":268,"height":440,"color":"4"},
+		{"id":"53b7b61fc9394b07","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#ивенты","x":-630,"y":560,"width":265,"height":440,"color":"4"},
+		{"id":"f66fd290162fdba5","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#государство и структуры","x":-323,"y":1280,"width":265,"height":440,"color":"3"},
+		{"id":"431fdbebf826dc7f","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#технологии и исследования","x":-630,"y":1280,"width":265,"height":440,"color":"3"},
+		{"id":"5368fb7557320f12","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#города и расположения регионы и области или \"гильдии\"","x":-14,"y":1280,"width":265,"height":440,"color":"3"},
+		{"id":"cedb86a643a46932","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#социальная среда чаты голосовые каналы и другое","x":-14,"y":2000,"width":265,"height":440,"color":"2"},
+		{"id":"e14cc3eb57a4d89c","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#наказания засуждения суды и аресты изгнание и испытательный срок","x":-630,"y":2000,"width":265,"height":440,"color":"2"},
+		{"id":"21dd00aff71b84cc","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#войны и восстания митинги и протесты","x":-323,"y":2000,"width":265,"height":440,"color":"2"},
+		{"id":"230c9497836d6bbe","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#законы и конституция","x":-630,"y":2720,"width":265,"height":440,"color":"1"},
+		{"id":"4d0771abc5189ffb","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#права и обязанности","x":-14,"y":2720,"width":265,"height":440,"color":"1"},
+		{"id":"e3306ef0fada3889","type":"file","file":"projects/NGI (NEOGRANDOS)/Neo Grandos Imperium.md","subpath":"#экономика","x":-323,"y":2720,"width":265,"height":440,"color":"1"}
+	],
+	"edges":[
+		{"id":"4e7e5ba3c5ace621","fromNode":"83f2e6249adc4016","fromSide":"top","toNode":"886df91dc11b666d","toSide":"bottom","color":"3"},
+		{"id":"10f25eba7411663b","fromNode":"83f2e6249adc4016","fromSide":"left","toNode":"4f55c31966207926","toSide":"right","color":"3"},
+		{"id":"9b3308caf00f31f3","fromNode":"4f55c31966207926","fromSide":"bottom","toNode":"4aa6bfe5b5b425a0","toSide":"top","color":"4"},
+		{"id":"eb1282fc80767cb3","fromNode":"83f2e6249adc4016","fromSide":"bottom","toNode":"1bbde5eeb3690965","toSide":"top","color":"3"},
+		{"id":"6525f41cca53eb70","fromNode":"1bbde5eeb3690965","fromSide":"bottom","toNode":"e9581e3aa5db6970","toSide":"top","color":"4"},
+		{"id":"916d3b01063439f3","fromNode":"e9581e3aa5db6970","fromSide":"bottom","toNode":"96f4102b48933b38","toSide":"top","color":"4"},
+		{"id":"2ad36564f6106eab","fromNode":"96f4102b48933b38","fromSide":"bottom","toNode":"9edee1fca22baffc","toSide":"top","color":"3"},
+		{"id":"0de763425d746a15","fromNode":"9edee1fca22baffc","fromSide":"bottom","toNode":"accc61e856a3fc51","toSide":"top","color":"2"},
+		{"id":"f197af288cfc0202","fromNode":"accc61e856a3fc51","fromSide":"bottom","toNode":"14ad927e8dfb0e28","toSide":"top","color":"1"},
+		{"id":"34c657be778e712f","fromNode":"4aa6bfe5b5b425a0","fromSide":"bottom","toNode":"96f4102b48933b38","toSide":"top","color":"4"}
+	]
+}
