@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 # полная информация проекта
 
 - **название:** **Neo Grandos Imperium**
