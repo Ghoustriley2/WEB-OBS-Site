@@ -1,19 +1,88 @@
+/* ===== BASE ===== */
 body {
-  background-color: #0b0f14;
-  color: #d6e2ff;
+  background: radial-gradient(circle at top, #0b0b0f, #050507);
+  color: #e6e6e6;
   font-family: Arial, sans-serif;
-  margin: 40px;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.6;
 }
 
+/* ===== MAIN TITLE ===== */
 h1 {
+  color: #d4af37; /* золото */
+  text-shadow: 0 0 15px #d4af37, 0 0 30px rgba(212,175,55,0.4);
+  font-size: 42px;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 10px;
+}
+
+/* ===== SECTIONS ===== */
+h2 {
+  color: #ffcc66;
+  margin-top: 40px;
+  border-left: 4px solid #d4af37;
+  padding-left: 10px;
+}
+
+h3 {
+  color: #c0c0c0;
+}
+
+/* ===== TEXT BLOCKS ===== */
+p {
+  color: #d0d0d0;
+}
+
+/* ===== EMPHASIS ===== */
+strong {
+  color: #ffd700;
+}
+
+em {
+  color: #aaaaaa;
+}
+
+/* ===== CODE BLOCKS ===== */
+pre {
+  background: #0f0f14;
+  border: 1px solid #2a2a2a;
+  padding: 15px;
+  overflow-x: auto;
   color: #00ffd5;
+}
+
+/* ===== LISTS ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #00ffd5;
+  text-decoration: none;
+}
+
+a:hover {
   text-shadow: 0 0 10px #00ffd5;
 }
 
-h2 {
-  color: #7aa2ff;
+/* ===== IMPERIAL HEADER LINE ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 30px 0;
 }
 
-a {
-  color: #00ffd5;
+/* ===== GOLD ACCENT BOX ===== */
+blockquote {
+  border-left: 4px solid #d4af37;
+  padding-left: 15px;
+  color: #cccccc;
+  background: rgba(212,175,55,0.05);
 }
