@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ECONOMY SYSTEM</title>
+
+<style>
+body {
+  background: radial-gradient(circle at top, #07070a, #030305);
+  color: #d8d8d8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.7;
+}
+
+.doc {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(212,175,55,0.15);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* HEADERS */
+h1 {
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212,175,55,0.6);
+  font-size: 44px;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: #ffd700;
+  border-left: 4px solid #d4af37;
+  padding-left: 12px;
+  margin-top: 35px;
+}
+
+h3 { color:#ffd700; }
+
+p { color:#cfcfcf; }
+
+ul { padding-left: 20px; }
+
+li::marker { color:#d4af37; }
+
+hr {
+  border:none;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#d4af37,#ffd700,transparent);
+  margin:30px 0;
+}
+
+/* STRIPES */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events:none;
+}
+
+/* NAV */
+.nav-wrapper{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+}
+
+.nav-main{
+  text-align:center;
+  color:#ffd700;
+  font-weight:bold;
+  letter-spacing:3px;
+  padding:10px 28px;
+  border:1px solid rgba(212,175,55,0.4);
+  background:rgba(0,0,0,0.6);
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 0 10px rgba(212,175,55,0.15);
+}
+
+.nav-main:hover{
+  box-shadow:0 0 20px #d4af37, 0 0 40px rgba(212,175,55,0.4);
+  transform:scale(1.05);
+}
+
+.nav-panel{
+  margin-top:12px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+
+  max-width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  transition:0.6s ease;
+  opacity:0;
+}
+
+.nav-wrapper:hover .nav-panel,
+.nav-main:focus + .nav-panel{
+  max-width:900px;
+  opacity:1;
+}
+
+.nav-panel a{
+  padding:8px 14px;
+  text-decoration:none;
+  color:#d8d8d8;
+  border:1px solid rgba(212,175,55,0.2);
+  background:rgba(0,0,0,0.5);
+  transition:0.25s;
+  font-size:14px;
+}
+
+.nav-panel a:hover{
+  color:#ffd700;
+  border-color:#d4af37;
+  box-shadow:0 0 15px rgba(212,175,55,0.5);
+  transform:translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-wrapper">
+  <div class="nav-main" tabindex="0">ECONOMY</div>
+  <div class="nav-panel">
+    <a href="index.html">MAIN</a>
+    <a href="voltage.html">VOLTAGE</a>
+    <a href="prime.html">PRIME AI</a>
+  </div>
+</div>
+
+<div class="doc">
+
+<h1>ЭКОНОМИКА</h1>
+<hr>
+
+<h2>ЭКОНОМИКА &gt; СПОСОБЫ ЗАРАБОТКА</h2>
+
+<p>Заработок валюты зависит от вклада участника в жизнь Империи.</p>
+
+<h3>Основные способы получения ВИРОВ:</h3>
+<ul>
+<li>участие в общении</li>
+<li>активность в чате</li>
+<li>участие в событиях и ивентах</li>
+<li>выполнение простых заданий</li>
+<li>помощь другим участникам</li>
+</ul>
+
+<hr>
+
+<h3>Основные способы получения КСАРОВ:</h3>
+<ul>
+<li>создание полезных идей и проектов</li>
+<li>вклад в развитие Империи</li>
+<li>участие в сложных заданиях</li>
+<li>активность в управленческих процессах</li>
+<li>участие в значимых событиях Империи</li>
+</ul>
+
+<hr>
+
+<h3>Принцип начисления:</h3>
+<ul>
+<li>ВИРЫ выдаются за активность</li>
+<li>КСАРЫ выдаются за качество и вклад</li>
+</ul>
+
+<hr>
+
+<h2>ЭКОНОМИКА &gt; КОНСТИТУЦИЯ</h2>
+
+<h3>РАЗРЕШЕНО:</h3>
+<ul>
+<li>зарабатывать валюту честным способом</li>
+<li>использовать валюту в рамках системы</li>
+<li>участвовать в экономике Империи</li>
+<li>обменивать ВИРЫ на КСАРЫ</li>
+<li>участвовать в развитии через проекты</li>
+</ul>
+
+<hr>
+
+<h3>ЗАПРЕЩЕНО:</h3>
+<ul>
+<li>баги и ошибки системы</li>
+<li>накрутка валюты</li>
+<li>мульти-аккаунты</li>
+<li>обман при передаче валюты</li>
+<li>продажа валюты за реальные деньги</li>
+<li>разрушение экономики</li>
+</ul>
+
+<hr>
+
+<h3>НАРУШЕНИЯ И ПОСЛЕДСТВИЯ:</h3>
+<ul>
+<li>списание валюты</li>
+<li>ограничение экономики</li>
+<li>временная блокировка</li>
+<li>исключение из системы</li>
+</ul>
+
+<hr>
+
+<h2>ОСНОВНОЙ ПРИНЦИП ЭКОНОМИКИ</h2>
+
+<p>
+КСАРЫ отражают влияние и вклад<br>
+ВИРЫ отражают активность<br><br>
+
+Экономика существует для поддержки Империи, а не личной выгоды без вклада.
+</p>
+
+</div>
+</body>
+</html>
