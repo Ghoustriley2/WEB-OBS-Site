@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>VOLTAGE SYSTEM</title>
+
+<style>
+body {
+  background: radial-gradient(circle at top, #07070a, #030305);
+  color: #d8d8d8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.7;
+}
+
+.doc {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(212,175,55,0.15);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* HEADERS */
+h1 {
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212,175,55,0.6);
+  font-size: 44px;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: #ffd700;
+  border-left: 4px solid #d4af37;
+  padding-left: 12px;
+  margin-top: 35px;
+}
+
+p { color: #cfcfcf; }
+
+ul { padding-left: 20px; }
+
+li::marker { color: #d4af37; }
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, #ffd700, transparent);
+  margin: 30px 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+/* ================= NAV ================= */
+
+.nav-wrapper{
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.nav-main{
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 10px 28px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(212,175,55,0.15);
+}
+
+.nav-main:hover{
+  box-shadow: 0 0 20px #d4af37, 0 0 40px rgba(212,175,55,0.4);
+  transform: scale(1.05);
+}
+
+.nav-panel{
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  max-width: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+
+  transition: 0.6s ease;
+  opacity: 0;
+}
+
+.nav-wrapper:hover .nav-panel,
+.nav-main:focus + .nav-panel{
+  max-width: 900px;
+  opacity: 1;
+}
+
+.nav-panel a{
+  display: inline-block;
+  padding: 8px 14px;
+  text-decoration: none;
+
+  color: #d8d8d8;
+  border: 1px solid rgba(212,175,55,0.2);
+  background: rgba(0,0,0,0.5);
+
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+.nav-panel a:hover{
+  color: #ffd700;
+  border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212,175,55,0.5);
+  transform: translateY(-2px);
+}
+
+.nav-panel::-webkit-scrollbar{ display:none; }
+.nav-panel{ scrollbar-width:none; }
+</style>
+
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="nav-wrapper">
+
+  <div class="nav-main" tabindex="0">
+    VOLTAGE
+  </div>
+
+  <div class="nav-panel">
+    <a href="index.html">MAIN</a>
+    <a href="economy.html">ECONOMY</a>
+    <a href="prime.html">PRIME AI</a>
+  </div>
+
+</div>
+
+<div class="doc">
+
+<h1>VOLTAGE SYSTEM (V0.4)</h1>
+<hr>
+
+<h2>0. ОПРЕДЕЛЕНИЕ СИСТЕМЫ</h2>
+
+<p>VOLTAGE — это модуль правил и безопасности внутри системы NGIX, отвечающий за определение, классификацию и предотвращение нарушений.</p>
+
+<p>Он является структурированным слоем, который:</p>
+
+<ul>
+<li>определяет, что считается нарушением</li>
+<li>классифицирует поведение пользователей по уровню риска</li>
+<li>выявляет потенциальные угрозы до их развития</li>
+<li>формирует основу для реакций NGIX (суд, санкции, протоколы)</li>
+</ul>
+
+<p>VOLTAGE не управляет системой и не выносит наказания.<br>
+Он формирует сигналы нарушения и уровень опасности для NGIX.</p>
+
+<hr>
+
+<h2>1. СОЦИАЛЬНЫЕ ЗАПРЕТЫ (SOC)</h2>
+<p>Запрещено:</p>
+<ul>
+<li>токсичное поведение с целью разрушения общения</li>
+<li>систематические оскорбления участников</li>
+<li>травля (индивидуальная или групповая)</li>
+<li>провоцирование конфликтов между участниками</li>
+<li>разжигание массовых споров и хаоса</li>
+<li>попытки разделить сообщество на враждующие группы</li>
+<li>скрытая агрессия с целью давления на людей</li>
+<li>манипуляция мнением группы участников</li>
+</ul>
+
+<hr>
+
+<h2>2. ЭКОНОМИЧЕСКИЕ ЗАПРЕТЫ (ECO)</h2>
+<p>Запрещено:</p>
+<ul>
+<li>создание валюты KSAR или VIR вне системы</li>
+<li>использование багов для получения валюты</li>
+<li>мульти-аккаунты для фарма ресурсов</li>
+<li>циклический фарм наград</li>
+<li>искусственное увеличение активности ради наград</li>
+<li>передача валюты самому себе</li>
+<li>накрутка экономики</li>
+<li>обесценивание валюты</li>
+</ul>
+
+<hr>
+
+<h2>3. АДМИНИСТРАТИВНЫЕ ЗАПРЕТЫ (ADM)</h2>
+<p>Запрещено:</p>
+<ul>
+<li>выдача ролей без оснований</li>
+<li>выдача валюты без причины</li>
+<li>использование прав ради выгоды</li>
+<li>вмешательство в решения</li>
+<li>скрытое управление</li>
+<li>конфликт интересов</li>
+<li>изменение правил вне процедур</li>
+</ul>
+
+<hr>
+
+<h2>4. СИСТЕМНЫЕ ЗАПРЕТЫ (SYS)</h2>
+<p>Запрещено:</p>
+<ul>
+<li>поиск багов</li>
+<li>тестирование уязвимостей</li>
+<li>нагрузка сервера</li>
+<li>массовые действия</li>
+<li>атаки</li>
+<li>обход правил</li>
+<li>боты без разрешения</li>
+</ul>
+
+<hr>
+
+<h2>5. ОБХОД СИСТЕМЫ (ANTI-EVASION)</h2>
+<ul>
+<li>альт-аккаунты</li>
+<li>обход бана</li>
+<li>скрытие личности</li>
+<li>дробление нарушений</li>
+<li>обход смысла правил</li>
+<li>распределённый спам</li>
+</ul>
+
+<hr>
+
+<h2>6. СОЦИАЛЬНАЯ ИНЖЕНЕРИЯ</h2>
+<ul>
+<li>выдача себя за администрацию</li>
+<li>ложный статус</li>
+<li>выманивание</li>
+<li>обман через доверие</li>
+<li>фальшивые личности</li>
+<li>манипуляции</li>
+<li>давление на админов</li>
+</ul>
+
+<hr>
+
+<h2>7. КОНТЕНТНЫЕ ЗАПРЕТЫ</h2>
+<ul>
+<li>незаконный контент</li>
+<li>инструкции вреда</li>
+<li>экстремизм</li>
+<li>угрозы</li>
+<li>пропаганда вреда</li>
+</ul>
+
+<hr>
+
+<h2>8. ОГРАНИЧЕНИЯ 18+</h2>
+<ul>
+<li>сексуальный контент вне зон</li>
+<li>порно в общих каналах</li>
+<li>вовлечение несовершеннолетних</li>
+<li>интимные обсуждения</li>
+</ul>
+
+<hr>
+
+<h2>9. МАНИПУЛЯЦИЯ СИСТЕМОЙ</h2>
+<ul>
+<li>слом экономики</li>
+<li>разрушение ролей</li>
+<li>координация против правил</li>
+<li>скрытые группы</li>
+<li>саботаж</li>
+</ul>
+
+<hr>
+
+<h2>10. СУПЕР-ПРАВИЛО СИСТЕМЫ</h2>
+<ul>
+<li>нарушает стабильность</li>
+<li>создаёт хаос</li>
+<li>даёт нечестное преимущество</li>
+<li>обходит правила</li>
+<li>разрушает доверие</li>
+</ul>
+
+<p>→ считается нарушением, даже если не описано явно</p>
+
+<hr>
+
+<h2>11. ПРИНЦИП VOLTAGE</h2>
+<p>Система работает не по буквам правил, а по их смыслу и последствиям.</p>
+
+</div>
+
+</body>
+</html>
