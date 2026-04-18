@@ -33,24 +33,12 @@ h2 {
 }
 
 /* TEXT */
-p {
-  color: #cfcfcf;
-}
+p { color: #cfcfcf; }
+b { color: #ffd700; }
 
-b {
-  color: #ffd700;
-}
+ul { padding-left: 20px; }
+li::marker { color: #d4af37; }
 
-/* LISTS */
-ul {
-  padding-left: 20px;
-}
-
-li::marker {
-  color: #d4af37;
-}
-
-/* LINES */
 hr {
   border: none;
   height: 2px;
@@ -58,7 +46,6 @@ hr {
   margin: 30px 0;
 }
 
-/* CODE BLOCKS */
 pre {
   background: linear-gradient(135deg, #0a0a0f, #050508);
   border-left: 4px solid #d4af37;
@@ -67,7 +54,6 @@ pre {
   overflow-x: auto;
 }
 
-/* QUOTES */
 blockquote {
   border-left: 4px solid #d4af37;
   padding: 12px;
@@ -75,7 +61,6 @@ blockquote {
   color: #d0d0d0;
 }
 
-/* STRIPE EFFECT */
 body::before {
   content: "";
   position: fixed;
@@ -88,4 +73,83 @@ body::before {
     transparent 3px
   );
   pointer-events: none;
+}
+
+/* =========================
+   NAVIGATION SYSTEM (FROM TICK2)
+========================= */
+
+.nav-wrapper{
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.nav-main{
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 10px 28px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(212,175,55,0.15);
+}
+
+.nav-main:hover{
+  box-shadow: 0 0 20px #d4af37, 0 0 40px rgba(212,175,55,0.4);
+  transform: scale(1.05);
+}
+
+.nav-panel{
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  max-width: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+
+  transition: 0.6s ease;
+  opacity: 0;
+}
+
+.nav-wrapper:hover .nav-panel,
+.nav-main:focus + .nav-panel{
+  max-width: 900px;
+  opacity: 1;
+}
+
+.nav-panel a{
+  display: inline-block;
+  padding: 8px 14px;
+  text-decoration: none;
+
+  color: #d8d8d8;
+  border: 1px solid rgba(212,175,55,0.2);
+  background: rgba(0,0,0,0.5);
+
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+.nav-panel a:hover{
+  color: #ffd700;
+  border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212,175,55,0.5);
+  transform: translateY(-2px);
+}
+
+.nav-panel{
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-panel::-webkit-scrollbar{
+  display: none;
 }
