@@ -178,7 +178,7 @@ hr {
 .led-track {
     display: flex;
     white-space: nowrap;
-    animation: led-loop 12s linear infinite;
+    animation: led-loop 9s linear infinite;
 }
 
 .led-track span {
@@ -190,4 +190,13 @@ hr {
 @keyframes led-loop {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+----------------------
+
+.led-bottom {
+    position: fixed;
+    bottom: 50px; /* над bottom-nav */
+    left: 0;
+    width: 100%;
 }
