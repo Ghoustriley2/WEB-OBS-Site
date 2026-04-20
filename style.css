@@ -1,209 +1,193 @@
 body {
-  background: radial-gradient(circle at top, #07070a, #030305);
-  color: #d8d8d8;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 40px;
-  line-height: 1.7;
+    margin: 0;
+    padding: 50px;
+    background: radial-gradient(circle at center, #0a0a0a, #000);
+    font-family: Arial, sans-serif;
+    color: #bbb;
 }
+
+/* =========================
+   SHINE CORE ANIMATION
+========================= */
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* =========================
+   DOC CONTAINER
+========================= */
 
 .doc {
-  max-width: 1000px;
-  margin: auto;
-  padding: 35px;
-  background: rgba(0,0,0,0.25);
-  border: 1px solid rgba(212,175,55,0.15);
-  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(212,175,55,0.12);
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
-/* HEADERS */
-h1 {
-  color: #d4af37;
-  text-shadow: 0 0 12px rgba(212,175,55,0.6);
-  font-size: 44px;
-  border-bottom: 2px solid #d4af37;
-  padding-bottom: 8px;
+/* =========================
+   HEADERS
+========================= */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    background: repeating-linear-gradient(
+        120deg,
+        #3a2f00 0px,
+        #6b5200 10px,
+        #b8962e 18px,
+        #d4af37 26px,
+        #b8962e 34px,
+        #6b5200 44px,
+        #3a2f00 60px
+    );
+
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 100s linear infinite;
 }
 
-h2 {
-  color: #ffd700;
-  border-left: 4px solid #d4af37;
-  padding-left: 12px;
-  margin-top: 35px;
-}
+/* =========================
+   TEXT
+========================= */
 
-/* TEXT */
 p { color: #cfcfcf; }
 b { color: #ffd700; }
 
 ul { padding-left: 20px; }
 li::marker { color: #d4af37; }
 
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #d4af37, #ffd700, transparent);
-  margin: 30px 0;
-}
-
 pre {
-  background: linear-gradient(135deg, #0a0a0f, #050508);
-  border-left: 4px solid #d4af37;
-  padding: 15px;
-  color: #00ffd5;
-  overflow-x: auto;
-}
-
-blockquote {
-  border-left: 4px solid #d4af37;
-  padding: 12px;
-  background: rgba(212,175,55,0.05);
-  color: #d0d0d0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255,255,255,0.02),
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  pointer-events: none;
+    background: linear-gradient(135deg, #0a0a0f, #050508);
+    border-left: 4px solid #d4af37;
+    padding: 15px;
+    color: #00ffd5;
+    overflow-x: auto;
 }
 
 /* =========================
-   NAVIGATION SYSTEM (FROM TICK2)
+   HR
+========================= */
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, #ffd700, transparent);
+    margin: 30px 0;
+}
+
+/* =========================
+   NAV
 ========================= */
 
 .nav-wrapper{
-  position: fixed;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
 }
 
 .nav-main{
-  text-align: center;
-  color: #ffd700;
-  font-weight: bold;
-  letter-spacing: 3px;
-  padding: 10px 28px;
-  border: 1px solid rgba(212,175,55,0.4);
-  background: rgba(0,0,0,0.6);
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(212,175,55,0.15);
-}
-
-.nav-main:hover{
-  box-shadow: 0 0 20px #d4af37, 0 0 40px rgba(212,175,55,0.4);
-  transform: scale(1.05);
+    text-align: center;
+    color: #ffd700;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px 28px;
+    border: 1px solid rgba(212,175,55,0.4);
+    background: rgba(0,0,0,0.6);
 }
 
 .nav-panel{
-  margin-top: 12px;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-
-  max-width: 0;
-  overflow-x: hidden;
-  white-space: nowrap;
-
-  transition: 0.6s ease;
-  opacity: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .nav-wrapper:hover .nav-panel,
 .nav-main:focus + .nav-panel{
-  max-width: 900px;
-  opacity: 1;
+    opacity: 1;
 }
 
 .nav-panel a{
-  display: inline-block;
-  padding: 8px 14px;
-  text-decoration: none;
-
-  color: #d8d8d8;
-  border: 1px solid rgba(212,175,55,0.2);
-  background: rgba(0,0,0,0.5);
-
-  transition: 0.25s;
-  font-size: 14px;
+    color: #d8d8d8;
+    text-decoration: none;
+    border: 1px solid rgba(212,175,55,0.2);
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.5);
 }
 
 .nav-panel a:hover{
-  color: #ffd700;
-  border-color: #d4af37;
-  box-shadow: 0 0 15px rgba(212,175,55,0.5);
-  transform: translateY(-2px);
+    color: #ffd700;
+    border-color: #d4af37;
 }
 
-.nav-panel{
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.nav-panel::-webkit-scrollbar{
-  display: none;
-}
-
-/* ===== BOTTOM NAV ===== */
+/* =========================
+   BOTTOM NAV
+========================= */
 
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
-
     display: flex;
     justify-content: center;
     gap: 40px;
-
     padding: 15px 0;
-
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-
+    background: rgba(0,0,0,0.85);
     border-top: 1px solid #d4af37;
 
-    z-index: 999;
+    transform: translateX(-40px); /* ← сдвиг влево */
 }
 
 .bottom-nav a {
     color: #d4af37;
     text-decoration: none;
-    font-size: 14px;
     letter-spacing: 2px;
-
-    position: relative;
-    transition: 0.3s;
 }
 
-/* hover glow */
 .bottom-nav a:hover {
     color: #ffd700;
     text-shadow: 0 0 8px #ffd700;
 }
 
-/* underline effect */
-.bottom-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 1px;
-    background: #ffd700;
-    transition: 0.3s;
+/* =========================
+   LED BAR (ДОБАВЛЕНО)
+========================= */
+
+.led-bar {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
+    height: 28px;
+    display: flex;
+    align-items: center;
 }
 
-.bottom-nav a:hover::after {
-    width: 100%;
+.led-track {
+    display: flex;
+    white-space: nowrap;
+    animation: led-loop 12s linear infinite;
+}
+
+.led-track span {
+    color: #ffd700;
+    padding-right: 50px;
+    font-family: monospace;
+}
+
+@keyframes led-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
