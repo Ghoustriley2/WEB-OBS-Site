@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGI — ASCENT PROTOCOL</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a, #000000);
+    color: #eaeaea;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    border-bottom: 1px solid #d4af37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 120px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 5px #ffd700;
+}
+
+.logo {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+/* левый логотип-ховер */
+.logo-left {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+    cursor: default;
+    overflow: visible; /* важно */
+    width: auto;
+}
+
+.logo-left .short,
+.logo-left .full {
+    display: inline-block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.logo-left .full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.logo-left:hover .short {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.logo-left:hover .full {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.logo-left .short,
+.logo-left .full {
+    display: inline-block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.logo-left .full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.logo-left:hover .short {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.logo-left:hover .full {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.container {
+    padding: 120px 40px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700;
+    margin-bottom: 40px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.02);
+    box-shadow: 0 0 20px rgba(212,175,55,0.1);
+}
+
+.section h2 {
+    color: #ffd700;
+}
+
+.levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.level {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(255,215,0,0.3);
+    border-radius: 10px;
+    background: rgba(255,215,0,0.05);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.level:hover {
+    background: rgba(255,215,0,0.15);
+    box-shadow: 0 0 10px #ffd700;
+}
+
+.infoboard {
+    margin-top: 60px;
+    padding: 25px;
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    background: rgba(255,215,0,0.05);
+    box-shadow: 0 0 20px rgba(255,215,0,0.2);
+}
+
+.infoboard h2 {
+    color: #ffd700;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #d4af37;
+    margin-top: 40px;
+    color: #777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-left">
+        <span class="short">NGI</span>
+        <span class="full">NEO GRANDOS IMPERIUM</span>
+    </div>
+
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">ECONOMY</a>
+        <a href="#">PRIME AI</a>
+        <a href="#">ASCENT</a>
+    </nav>
+
+    <div class="logo" onclick="toggleLogo()" id="logo">NGI</div>
+</header>
+
+<div class="container">
+<h1>ASCENT PROTOCOL</h1>
+
+<div class="section"><h2>НОВИЦИАТ</h2><div class="levels">
+<div class="level" onclick="showInfo(0)">LVL 0</div>
+<div class="level" onclick="showInfo(1)">LVL 1</div>
+<div class="level" onclick="showInfo(2)">LVL 2</div>
+<div class="level" onclick="showInfo(3)">LVL 3</div>
+<div class="level" onclick="showInfo(4)">LVL 4</div>
+<div class="level" onclick="showInfo(5)">LVL 5</div>
+</div></div>
+
+<div class="section"><h2>ОПЕРАНДУМ</h2><div class="levels">
+<div class="level" onclick="showInfo(6)">LVL 6</div>
+<div class="level" onclick="showInfo(7)">LVL 7</div>
+<div class="level" onclick="showInfo(8)">LVL 8</div>
+<div class="level" onclick="showInfo(9)">LVL 9</div>
+<div class="level" onclick="showInfo(10)">LVL 10</div>
+</div></div>
+
+<div class="section"><h2>АГЕНТУМ</h2><div class="levels">
+<div class="level" onclick="showInfo(11)">LVL 11</div>
+<div class="level" onclick="showInfo(12)">LVL 12</div>
+<div class="level" onclick="showInfo(13)">LVL 13</div>
+<div class="level" onclick="showInfo(14)">LVL 14</div>
+<div class="level" onclick="showInfo(15)">LVL 15</div>
+</div></div>
+
+<div class="section"><h2>СПЕКТАНТУМ</h2><div class="levels">
+<div class="level" onclick="showInfo(16)">LVL 16</div>
+<div class="level" onclick="showInfo(17)">LVL 17</div>
+<div class="level" onclick="showInfo(18)">LVL 18</div>
+<div class="level" onclick="showInfo(19)">LVL 19</div>
+<div class="level" onclick="showInfo(20)">LVL 20</div>
+</div></div>
+
+<div class="section"><h2>КОРДИНАНТУМ</h2><div class="levels">
+<div class="level" onclick="showInfo(21)">LVL 21</div>
+<div class="level" onclick="showInfo(22)">LVL 22</div>
+<div class="level" onclick="showInfo(23)">LVL 23</div>
+<div class="level" onclick="showInfo(24)">LVL 24</div>
+<div class="level" onclick="showInfo(25)">LVL 25</div>
+</div></div>
+
+<div class="section"><h2>АРХИТЕКТУМ</h2><div class="levels">
+<div class="level" onclick="showInfo(26)">LVL 26</div>
+<div class="level" onclick="showInfo(27)">LVL 27</div>
+<div class="level" onclick="showInfo(28)">LVL 28</div>
+<div class="level" onclick="showInfo(29)">LVL 29</div>
+</div></div>
+
+<div class="section"><h2>АПОЛЛО</h2><div class="levels">
+<div class="level" onclick="showInfo(30)">LVL 30</div>
+</div></div>
+
+<div class="infoboard" id="infoboard">
+<h2>LEVEL INFOBOARD</h2>
+<p>Выберите уровень...</p>
+</div>
+
+</div>
+
+<footer>NEO GRANDOS IMPERIUM ©</footer>
+
+<script>
+let expanded = false;
+function toggleLogo() {
+    const logo = document.getElementById('logo');
+    if (!expanded) {
+        logo.textContent = 'NEO GRANDOS IMPERIUM';
+    } else {
+        logo.textContent = 'NGI';
+    }
+    expanded = !expanded;
+}
+
+const data = {
+0: "Базовый доступ, наблюдатель",
+1: "Доступ к экономике и чатам",
+2: "+5% доход VIR",
+3: "Доступ к ивентам",
+4: "+10% доход VIR",
+5: "Имперский статус",
+6: "Расширенные задания",
+7: "Голосования",
+8: "Мини-решения",
+9: "+15% доход VIR",
+10: "Влияние на ивенты",
+11: "Отчёты",
+12: "NGIX тесты",
+13: "Экономика KSAR",
+14: "+20% VIR",
+15: "Имперский агент",
+16: "VOLTAGE обучение",
+17: "Оценка нарушений",
+18: "Эконом предложения",
+19: "+25% VIR",
+20: "Старший Имперец",
+21: "VOLTAGE логика",
+22: "Управление ивентами",
+23: "Моделирование",
+24: "+30% VIR",
+25: "Координатор",
+26: "PRIME анализ",
+27: "VOLTAGE решения",
+28: "Законы",
+29: "+40% VIR",
+30: "Полный доступ NGI"
+};
+
+function showInfo(level) {
+    document.getElementById('infoboard').innerHTML = `<h2>LEVEL ${level}</h2><p>${data[level]}</p>`;
+}
+</script>
+
+</body>
+</html>
